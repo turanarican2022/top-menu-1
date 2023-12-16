@@ -99,27 +99,19 @@ header {
   grid-template-columns: 1fr 4fr;
 }
 
-.top-menu-right-text {
+.top-menu--left {
   background-color: burlywood;
   padding: 12px;
 }
 
-.top-menu-inner-column {
-  background-color: bisque;
-  padding: 12px;
-  display: grid;
-}
-
-.top-menu-inner-column li details summary {
-  list-style: none;
-}
-
-.top-menu-inner-menu {
+.top-menu--inner-menu {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.top-menu-inner-menu--menu-group {
-  list-style: none;
+.top-menu--inner-menu--column {
+  background-color: bisque;
+  padding: 12px;
+  display: grid;
 }

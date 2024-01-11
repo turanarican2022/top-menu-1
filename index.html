@@ -1,69 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="normalize.css" /> -->
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <title>Menu</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="logo">
-          <img src="pnb.svg" alt="" />
-        </div>
-        <button
-          id="top-menu-btn"
-          class="top-menu-btn"
-          type="button"
-          title="View links"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="ionicon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-              stroke-width="32"
-              d="M80 160h352M80 256h352M80 352h352"
-            />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="queries.css">
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/91a5301eb3.js" crossorigin="anonymous"></script>
+  <title>Menu</title>
+</head>
+
+<body>
+  <div class="container">
+    <header id="site-header">
+      <div id="logo">
+        <img src="pandb.svg" alt="" />
+      </div>
+      <form action="" class="search-form" method="get">
+        <input type="search" class="search-field" placeholder="Search" name="q" />
+        <button class="search-button" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 glass-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
         </button>
-      </header>
-      <div id="top-menu" class="top-menu">
-        <div id="arw-top"><div id="arw-bottom"></div></div>
-        <div class="top-menu-window">
-          <div class="top-menu--left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-            provident error dolore a perspiciatis totam fugit vitae magni quidem
-            aliquam?
-          </div>
-          <ul class="top-menu--inner-menu">
-            <li class="top-menu--inner-menu--column"></li>
-            <li class="top-menu--inner-menu--column"></li>
+      </form>
+      <div class="top-btns-wrapper">
+        <a id="sign-in-btn">Sign in</a>
+        <a id="sign-up-btn">Sign up</a>
+        <button id="top-menu-btn" type="button" title="View links">
+          <!-- <img src="menu-outline.svg" alt="" /> -->
+          Courses
+        </button>
+      </div>
+    </header>
+    <nav id="top-menu">
+      <!-- <div id="arw-top"><div id="arw-bottom"></div></div> -->
+      <div id="top-menu-window">
+        <ul id="top-menu--inner-menu">
+          <li class="top-menu--inner-menu--column">
+            <header>
+              <img src="logo-html5.svg" alt="" />
+              <h4 class="top-menu--inner-menu--column--title">Front End Development</h4>
+            </header>
+            <ul class="top-menu--inner-menu--column--menu-list">
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">HTML</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">CSS</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Javascript</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Bootstrap</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">React</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Vue</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Angular</a>
+              </li>
+            </ul>
+          </li>
+          <li class="top-menu--inner-menu--column">
+            <header>
+              <img src="logo-python.svg" alt="" />
+              <h4 class="top-menu--inner-menu--column--title">Back End Development</h4>
+            </header>
+            <ul class="top-menu--inner-menu--column--menu-list">
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">NodeJS</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Python</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Ruby</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">RESTful APIs</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">GraphQL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="top-menu--inner-menu--column">
+            <header>
+              <img src="grid.svg" alt="" />
+              <h4 class="top-menu--inner-menu--column--title">Databases</h4>
+            </header>
+            <ul class="top-menu--inner-menu--column--menu-list">
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">SQL</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">MySQL</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">PostgreSQL</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">NoSQL</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">MongoDB</a>
+              </li>
+            </ul>
+          </li>
+          <li class="top-menu--inner-menu--column">
+            <header>
+              <img src="book.svg" alt="" />
+              <h4 class="top-menu--inner-menu--column--title">Learning Paths</h4>
+            </header>
+            <ul class="top-menu--inner-menu--column--menu-list">
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Front End Developer</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Back End Developer</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Full Stack Developer</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Mobile App Developer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="top-menu--inner-menu--column">
+            <header>
+              <img src="cloud.svg" alt="" />
+              <h4 class="top-menu--inner-menu--column--title">Web Technologies</h4>
+            </header>
+            <ul class="top-menu--inner-menu--column--menu-list">
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Web Security</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">DevOps and Deployment</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Cloud Computing</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Web Accessibility</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Progressive Web Apps</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Web Performance Optimization</a>
+              </li>
+              <li>
+                <a href="#" class="top-menu--inner-menu--link">Cybersecurity</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+        <footer class="top-menu--footer">
+          <ul class="top-menu--footer-list">
+            <li>
+              <a href="#" class="top-menu--footer--list-item">Privacy Policy</a>
+            </li>
+            <li><a href="#" class="top-menu--footer--list-item">Terms</a></li>
+            <li><a href="#" class="top-menu--footer--list-item">Forums</a></li>
+
           </ul>
-        </div>
+          <ul id="social-links">
+            <li><i class="social-link fa-brands fa-x-twitter fa-lg"></i></li>
+            <li><i class="social-link fa-brands fa-instagram fa-lg"></i></li>
+            <li><i class="social-link fa-brands fa-facebook-f fa-lg"></i></li>
+          </ul>
+          <details id="top-menu--language-selector">
+            <summary id="lang-selector--summary">English</summary>
+            <ul>
+              <li>Français</li>
+              <li>Deutsch</li>
+              <li>日本語</li>
+              <li>Espanol</li>
+              <li>Italiano</li>
+              <li>한국어</li>
+              <li>Portugues</li>
+            </ul>
+          </details>
+        </footer>
       </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nemo
-        asperiores fuga a provident maxime autem sed hic corporis ipsum illum
-        esse optio vero, repudiandae molestias perspiciatis et. Exercitationem a
-        dignissimos ipsam dicta repellendus ullam, similique praesentium
-        deleniti veritatis perferendis! Laborum ratione aliquam consequatur
-        illum autem reiciendis nesciunt voluptatibus adipisci sit dolor porro
-        incidunt tempora voluptatem, veritatis temporibus molestias suscipit,
-        velit a dolorem quasi! Obcaecati quo ullam exercitationem nostrum
-        assumenda consequuntur ut est voluptatum beatae, necessitatibus illum.
-        Veniam recusandae explicabo necessitatibus rem totam, a, odit velit
-        impedit delectus tempora incidunt voluptatum deserunt quidem soluta
-        ullam tempore dolorum, id animi reprehenderit.
-      </div>
-    </div>
-  </body>
+    </nav>
+    <section>
+    </section>
+  </div>
+</body>
+
 </html>
